@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'comunicacion';
+  valor1: string = '10';
+  valor2: string = '20';
+  resultadoP: number;
+
+  captaResultado(event) {
+    this.resultadoP = event;
+    console.log(event)
+  }
 }
